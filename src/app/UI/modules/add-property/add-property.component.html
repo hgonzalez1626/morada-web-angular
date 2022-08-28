@@ -1,0 +1,105 @@
+<section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12 col-lg-9 col-xl-7">
+                <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                    <div class="card-body p-4 p-md-5">
+                        <h1 class="mb-4 pb-2 pb-md-0 mb-md-5 text-uppercase justify-content-center align-items-center">
+                            Registro de Propiedades</h1>
+                        <form [formGroup]="addpropertyForm" class="mx-1 mx-md-4">
+                            <div class="row">
+                                <div class="mb-4">
+
+                                    <div class="form-outline">
+                                        <input type="text" id="title" class="form-control form-control-lg"
+                                            placeholder="Titulo" formControlName="title"/>                                            
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="mb-4">
+                                    <select class="select form-control-lg w-100" formControlName="city">
+                                        <option value="">--Seleccione Ciudad--</option>
+                                        <option value="1">Medellín</option>
+                                        <option value="2">San Pedro</option>
+                                        <option value="3">Rionegro</option>
+                                        <option value="4">Caldas</option>
+                                        <option value="5">Llano Grande</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="mb-4">
+                                    <select class="select form-control-lg w-100" formControlName="zone" >
+                                        <option value="">--Seleccione Zona--</option>
+                                        <option value="1">Belen</option>
+                                        <option value="2">Envigado</option>
+                                        <option value="3">Poblado</option>
+                                        <option value="4">Laureles</option>
+                                        <option value="5">Otra</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="mb-4">
+                                    <select class="select form-control-lg w-100" formControlName="propertyType">
+                                        <option value="">--Seleccione Tipo de Inmueble--</option>
+                                        <option value="1">Apartamento</option>
+                                        <option value="2">Casa</option>
+                                        <option value="3">Lote</option>
+                                        <option value="4">Finca</option>
+                                        <option value="5">Local</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+
+                                    <h6 class="mb-2 pb-1">Tipo de Negocio: </h6>
+
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="bussinessType"
+                                            id="Arriendo" value="10" checked formControlName="bussinessType"/>
+                                        <label class="form-check-label" for="Arriendo">Arriendo</label>
+                                    </div>
+
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="bussinessType"
+                                            id="Venta" value="20" formControlName="bussinessType"/>
+                                        <label class="form-check-label" for="Venta">Venta</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">$</span>
+                                <input type="text" class="form-control" placeholder="Valor"
+                                    aria-label="Amount (to the nearest dollar)" formControlName="value">
+                            </div>
+                            <div class="row">
+                                <div class="mb-4 pb-2">
+                                    <div class="form-outline w-100">
+                                        <input type="text" id="emailAddress" class="form-control form-control-lg w-100"
+                                            placeholder="Descripción Corta" formControlName="shortDescription"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-text">Descripción Completa</span>
+                                <textarea class="form-control" aria-label="With textarea" formControlName="description"></textarea>
+                            </div>
+                            <div class="row">
+                                <div class="input-group mb-3 mt-4">
+                                    <input type="file" class="form-control" formControlName="mainImage" id="inputGroupFile02">
+                                    <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                                </div>
+                            </div>
+                            <div class="mt-4 pt-2">
+                                <input class="btn btn-primary btn-lg w-100" type="submit" value="Submit" (click)="register()"/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
